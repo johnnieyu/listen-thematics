@@ -27,10 +27,8 @@ export default function ThematicsContainer() {
       [thematics[i], thematics[j]] = [thematics[j], thematics[i]];
     }
 
-    // Setup thematics after a delay
-    setTimeout(() => {
-      setupThematics(thematics);
-    }, 1500);
+    // Setup thematics immediately
+    setupThematics(thematics);
 
     // Title click handler for reset
     $('#title').on('click', function() {
