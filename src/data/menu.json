@@ -1,0 +1,15 @@
+[
+    {
+    "name": "About",
+    "link": "#",
+    "type": "modal"
+  },
+    {
+    "name": "Listen.co",
+    "link": "https://listen.co"
+  },
+  {
+    "name": "Listen.codes",
+    "link": "https://listen.codes"
+  }
+] 

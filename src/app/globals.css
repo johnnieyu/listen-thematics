@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  width: 100vw;
+  max-height: 80vh;
+  text-align: center;
+  background-color: #F0F0F0;
+  overflow: hidden;
+}
+
+.header-container {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  z-index: 10;
+  text-align: left;
+}
+
+#title {
+  font-family: 'Baskerville', serif;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 1.0;
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+#title strong {
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 0.5em;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #374151;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 3em;
+  border-radius: 8px;
+  max-width: 750px;
+  width: 90%;
+  position: relative;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  color: #374151;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+#thematics-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.thematic {
+  width: 14em;
+  border-radius: 20px;
+  padding: 30px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2em;
+  background-color: #F0F0F0;
+  color: #374151;
+  position: absolute;
+  left: calc(50vw - 100px);
+  top: calc(50vh - 100px);
+  transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.thematic strong {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.thematic-subtitle {
+  display: block;
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 0em;
+}
+
+.thematic-description {
+  font-size: 1em;
+}
+
+.thematic:active {
+  cursor: grabbing;
+}
+
+.activated {
+  overflow: hidden;
+  transition: all 200ms ease;
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 0px 0px rgba(0,0,0,0), -2px -2px 5px 0px rgba(255,255,255,0.9), inset 0px 0px 0px 0px rgba(255,255,255,0);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 0px 0px rgba(0,0,0,0), -2px -2px 5px 0px rgba(255,255,255,0.9), inset 0px 0px 0px 0px rgba(255,255,255,0);
+  box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 0px 0px rgba(0,0,0,0), -2px -2px 5px 0px rgba(255,255,255,0.9), inset 0px 0px 0px 0px rgba(255,255,255,0);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.activated:hover {
+  -webkit-box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 0px 0px rgba(0,0,0,0), -4px -4px 10px 0px rgba(255,255,255,0.9), inset 0px 0px 0px 0px rgba(255,255,255,0);
+  -moz-box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 0px 0px rgba(0,0,0,0), -4px -4px 10px 0px rgba(255,255,255,0.9), inset 0px 0px 0px 0px rgba(255,255,255,0);
+  box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.1), inset 0px 0px 0px 0px rgba(0,0,0,0), -4px -4px 10px 0px rgba(255,255,255,0.9), inset 0px 0px 0px 0px rgba(255,255,255,0);
+} 
