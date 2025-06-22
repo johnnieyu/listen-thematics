@@ -50,6 +50,7 @@ export default function ThematicsContainer() {
     // Mouse enter handler for progressive drag activation
     $(containerRef.current).on('mouseenter', '.thematic', function() {
       $(this).addClass('activated');
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ($(this) as any).draggable({
         snap: true,
         containment: '#thematics-container',
