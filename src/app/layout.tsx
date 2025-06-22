@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Investment Thematics",
-  description: "Interactive investment thematics and strategic insights",
+  title: "Thematics by Listen.codes",
+  description: "Interactive investment thematics and strategic insights by Listen.",
 };
 
 export default function RootLayout({
