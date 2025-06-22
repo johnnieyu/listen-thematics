@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: 12px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -144,7 +148,7 @@ body {
 }
 
 .thematic-description {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .thematic:active {
