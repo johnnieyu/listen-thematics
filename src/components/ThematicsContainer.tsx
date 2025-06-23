@@ -57,12 +57,12 @@ export default function ThematicsContainer() {
     });
 
     // Click handler for text-to-speech
-    $(containerRef.current).on('click', '.thematic', function() {
-      const quote = $(this).text();
-      const msg = new SpeechSynthesisUtterance(quote);
-      msg.voice = getRandomVoice();
-      window.speechSynthesis.speak(msg);
-    });
+    // $(containerRef.current).on('click', '.thematic', function() {
+    //   const quote = $(this).text();
+    //   const msg = new SpeechSynthesisUtterance(quote);
+    //   msg.voice = getRandomVoice();
+    //   window.speechSynthesis.speak(msg);
+    // });
   }, []);
 
   useEffect(() => {
@@ -118,14 +118,14 @@ export default function ThematicsContainer() {
     });
   };
 
-  const getRandomVoice = () => {
-    const availableVoices = window.speechSynthesis.getVoices();
-    const filteredVoices = availableVoices.filter(function(voice: SpeechSynthesisVoice) {
-      return (voice.lang.includes('en') && (voice.name.includes('Male') || voice.name.includes('Female')));
-    });
-    const randomIndex = Math.floor(Math.random() * filteredVoices.length);
-    return filteredVoices[randomIndex];
-  };
+  // const getRandomVoice = () => {
+  //   const availableVoices = window.speechSynthesis.getVoices();
+  //   const filteredVoices = availableVoices.filter(function(voice: SpeechSynthesisVoice) {
+  //     return (voice.lang.includes('en') && (voice.name.includes('Male') || voice.name.includes('Female')));
+  //   });
+  //   const randomIndex = Math.floor(Math.random() * filteredVoices.length);
+  //   return filteredVoices[randomIndex];
+  // };
 
   return (
     <div className="relative w-screen h-screen flex flex-col items-center justify-center p-6 z-0">
